@@ -8,13 +8,13 @@ suivant.
 
 int sort_max(int *tab , int count)
 {
+    int j =   count;
     int i ;
     int swap;
-    int j =   count;
-    while ( count >= 0)
+       for( count = count;  count >= 0 ; count--)
     {
         i = 0;
-        while (i < count - 1)
+        for (i = 0 ;  i < count - 1; i++)
         {
             if (tab[i] > tab[i + 1])
             {
@@ -22,11 +22,11 @@ int sort_max(int *tab , int count)
                 tab[i] = tab[i + 1];
                 tab[i + 1] = swap ;
             }
-            i++;
-        }
         
-        count--;
+        } 
     }
+
+    
     return tab[j-1]; 
 }
 int main()
