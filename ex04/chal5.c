@@ -11,10 +11,10 @@ int sort_min(int *tab , int count)
 {
     int i ;
     int swap;
-    while ( count >= 0)
+       for( count = count;  count >= 0 ; count--)
     {
         i = 0;
-        while (i < count - 1)
+        for (i = 0 ;  i < count - 1; i++)
         {
             if (tab[i] > tab[i + 1])
             {
@@ -22,11 +22,10 @@ int sort_min(int *tab , int count)
                 tab[i] = tab[i + 1];
                 tab[i + 1] = swap ;
             }
-            i++;
-        }
         
-        count--;
+        } 
     }
+
     return tab[0]; 
 }
 int main()
